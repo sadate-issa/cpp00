@@ -1,25 +1,24 @@
 #include <iostream>
 #include <cctype>
-#include <string>
 
 void	print_upper(char *str)
 {
-	for (size_t i = 0; i < str.size; i++)
+	for (int i = 0; str[i]; i++)
 	{
-		str[i] = std::toupper(str[i]);
+		str[i] = static_cast<char>(std::toupper(static_cast<unsigned char>(str[i])));
 	}
-	std::cout << str << std::endl;
+	std::cout << str;
 }
 
 int	main(int argc, char **argv)
 {
-	std::string str = argv[1];
 	if (argc == 1)
 		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
 	else
 	{
-		for (size_t = 0; argv(argc - 1); argv++)
-			std::cout << print_upper(argv[i]) << std::endl;
+		for (int i = 1; i < argc; i++)
+			print_upper(argv[i]);
+		std::cout << std::endl;
 	}
 	return (0);
 }
