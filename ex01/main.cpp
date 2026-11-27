@@ -1,13 +1,32 @@
 #include "PhoneBook.hpp"
-#include <iostream>
+#include "Contact.hpp"
 
 int main(void)
 {
 	PhoneBook	book;
+	Contact		c;
 
-	book.setContactAt(0, "Ada", "Lovelace", "0102030405");
-	book.setContactAt(1, "Grace", "Hopper", "0607080910");
-	book.setContactAt(2, "Linus", "Torvalds", "0203040506");
-	book.printAll();
+	book.displayContacts();
+	c.setFirstName("Ada");
+	book.addContact(c);
+	c.setFirstName("Grace");
+	book.addContact(c);
+	c.setFirstName("Linus");
+	book.addContact(c);
+	c.setFirstName("Raissa");
+	book.addContact(c);
+	c.setFirstName("Sofiane");
+	book.addContact(c);
+	c.setFirstName("Arun");
+	book.addContact(c);
+	c.setFirstName("Ambre");
+	book.addContact(c);
+	c.setFirstName("Soubatra");
+	book.addContact(c);
+	c.setFirstName("Alex");
+	book.addContact(c);
+	c.setFirstName("Sadate");
+	book.addContact(c);
+	book.displayContacts();
 	return 0;
 }

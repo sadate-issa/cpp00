@@ -4,13 +4,10 @@ Contact::Contact(void)
 {
 }
 
-void		Contact::setContact(std::string fn, std::string ln, std::string nn, std::string pn, std::string ds)
+
+void	Contact::setFirstName(std::string fn)
 {
 	_firstName = fn;
-	_lastName = ln;
-	_nickName = nn;
-	_phoneNumber = pn;
-	_darkestSecret = ds;
 }
 
 std::string	Contact::getFirstName(void) const
@@ -18,7 +15,8 @@ std::string	Contact::getFirstName(void) const
 	return (_firstName);
 }
 
-std::string	Contact::getLastName(void) const
+
+/* std::string	Contact::getLastName(void) const
 {
 	return (_lastName);
 }
@@ -36,4 +34,15 @@ std::string	Contact::getPhoneNumber(void) const
 std::string	Contact::getDarkestSecret(void) const
 {
 	return (_darkestSecret);
+} */
+
+/*
+void		Contact::setContact(std::string fn, std::string ln, std::string nn, std::string pn, std::string ds)
+{
+	_firstName = fn;
+	_lastName = ln;
+	_nickName = nn;
+	_phoneNumber = pn;
+	_darkestSecret = ds;
 }
+*/

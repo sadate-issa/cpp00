@@ -3,14 +3,14 @@
 
 # include "Contact.hpp"
 # include <cstddef>
+# include <iostream>
 
 class PhoneBook
 {
 public:
 	PhoneBook(void);
-	void	setContactAt(size_t i, std::string fn, std::string ln, std::string pn);
-	void	addContact(const Contact &newContact);
-	void	displayContacts(void);
+	void	addContact(const Contact &c);
+	void	displayContacts(void) const;
 
 private:
 	Contact			_contacts[8];
@@ -19,3 +19,7 @@ private:
 };
 
 #endif
+
+
+
+//	void	setContactAt(size_t i, std::string fn, std::string ln, std::string pn);
